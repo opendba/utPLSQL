@@ -318,6 +318,9 @@ create or replace package test_expectations_cursor is
  
   --%test( Unordered fix for issues with duplicate no : #764 )   
   procedure unordered_fix_764;
+  
+  --%test ( Compare insiginificant whitespaces )
+  procedure insginificant_whitespace;
  
 end;
 /

@@ -2020,5 +2020,20 @@ Diff:%
 
   end;
  
+  --%test ( Compare insiginificant whitespaces )
+  procedure insginificant_whitespace is
+    l_actual   sys_refcursor;
+    l_expected sys_refcursor;
+  begin
+    open l_expected for
+      select * from table(ut_varchar2_list(''));
+	 
+	open l_actual for
+	  select * from table(ut_varchar2_list(' '));
+    --Assert
+    ut3.ut.expect( l_actual ).to_equal( l_expected );
+	ut.expect(expectations.failed_expectations_data()).not_to_be_empty();
+  end;  
+ 
 end;
 /
