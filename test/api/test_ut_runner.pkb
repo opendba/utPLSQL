@@ -249,7 +249,7 @@ end;';
     l_actual integer;
   begin
     --Act
-    ut3.ut_annotation_manager.rebuild_annotation_cache(user,'PACKAGE');
+    ut3.ut_runner.rebuild_annotation_cache(user,'PACKAGE');
     --Assert
     select count(1) into l_actual
       from ut3.ut_annotation_cache_info i
