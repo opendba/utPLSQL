@@ -20,5 +20,4 @@ time utPLSQL-cli/bin/utplsql run ${UT3_TESTER}/${UT3_TESTER_PASSWORD}@${CONNECTI
 -f=ut_sonar_test_reporter     -o=test_results.xml \
 -f=ut_junit_reporter          -o=junit_test_results.xml \
 -f=ut_tfs_junit_reporter      -o=tfs_test_results.xml \
--f=ut_documentation_reporter  -o=test_results.log -s \
--scc
+-f=ut_documentation_reporter  -o=test_results.log -s
